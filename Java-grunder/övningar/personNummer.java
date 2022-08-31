@@ -34,23 +34,5 @@ public class Main {
             System.out.println("Personnumret är inte giltigt");
         }
 
-
-        //UNDER OMBYGGNAD
-        /*int k = 0;
-        ArrayList<Integer> evens = new ArrayList<>();
-        ArrayList<Integer> odds = new ArrayList<>();
-        while ( k <= numbers.length) {
-            for (int i = 0; i % 2 == 0; i++) {
-                evens.add(intList.get(i) + intList.get(i));
-                System.out.println(evens);
-            }
-
-            for (int i = 0; i % 2 != 0; i++) {
-                odds.add(intList.get(i));
-            }
-            k++;
-
-        }*/
-
     }
 }
