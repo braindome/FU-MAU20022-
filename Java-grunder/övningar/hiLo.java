@@ -14,7 +14,7 @@ public class Main {
         //Svårt skall ge ett tal 1-1000.
         //Användaren skall få välja svårighetsgrad när hen först startar spelet.
         //När en spelomgång har spelats klart skall antalet försök skrivas ut på skärmen.
-        
+
         Scanner sc = new Scanner(System.in);
         Random slump = new Random();
 
@@ -27,42 +27,65 @@ public class Main {
 
         if ( level.equals("easy")) {
             System.out.println("Give a number between 1 and 10: ");
-            int input = Integer.valueOf(sc.nextLine());
+            int input = 0;
             int i = 1;
 
-            while ( input != easyRange) {
+            while ( easyRange != input ) {
                 input = Integer.valueOf(sc.nextLine());
+                if ( easyRange > input ) {
+                    System.out.println("Too low! Try again");
+                } else if ( easyRange < input ) {
+                    System.out.println("Too high! Try again");
+                } else {
+                    System.out.println("Correct! It only took you " + i + " tries.");
+                    break;
+                }
                 i++;
-                System.out.println("Correct! It took you only " + i + " tries!");
-                break;
+
+
             }
         }
 
         if ( level.equals("medium")) {
             System.out.println("Give a number between 1 and 100: ");
-            int input = Integer.valueOf(sc.nextLine());
+            int input = 0;
             int i = 1;
 
-            while ( input != mediumRange) {
+            while ( mediumRange != input ) {
                 input = Integer.valueOf(sc.nextLine());
+                if ( mediumRange > input ) {
+                    System.out.println("Too low! Try again");
+                } else if ( mediumRange < input ) {
+                    System.out.println("Too high! Try again");
+                } else {
+                    System.out.println("Correct! It only took you " + i + " tries.");
+                    break;
+                }
                 i++;
-                System.out.println("Correct! It took you only " + i + " tries!");
-                break;
+
+
             }
         }
 
         if ( level.equals("hard")) {
             System.out.println("Give a number between 1 and 1000: ");
-            int input = Integer.valueOf(sc.nextLine());
+            int input =0;
             int i = 1;
 
-            while ( input != hardRange) {
+            while ( hardRange != input ) {
                 input = Integer.valueOf(sc.nextLine());
+                if ( hardRange > input ) {
+                    System.out.println("Too low! Try again");
+                } else if ( easyRange < input ) {
+                    System.out.println("Too high! Try again");
+                } else {
+                    System.out.println("Correct! It only took you " + i + " tries.");
+                    break;
+                }
                 i++;
-                System.out.println("Correct! It took you only " + i + " tries!");
-                break;
+
+
             }
         }
-
     }
 }
