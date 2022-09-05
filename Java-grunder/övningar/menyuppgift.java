@@ -17,8 +17,8 @@ public class Main {
 
         Scanner sc = new Scanner(in);
 
+        //Loop-container: allt inuti loopen körs om och om tills man matar in "e"
         while (true) {
-
             String choice = String.valueOf(sc.nextLine());
             if (choice.equals("1")) {
                 System.out.println("Här adderar vi två tal");
@@ -55,6 +55,7 @@ public class Main {
         return first + second;
     }
 
+    //Counter genom ordets längd i for-loopen; lagrar bokstaven i temp. If-satsen ökar bokstavens counter om temp == c (inmatad).
     static int numberOfCharacters (String word, char c) {
         int totalChars = 0;
         char temp;
@@ -68,6 +69,7 @@ public class Main {
 
     }
 
+    //for-loopen räknar ordets längd baklänges. I rev lagras bokstäverna.
     static void mirror (String word) {
         String rev = "";
         for (int i = word.length()-1; i >= 0; i--) {
@@ -75,13 +77,18 @@ public class Main {
         }
         System.out.println(rev);
     }
-
+    
+    //Splittrar inmatad sträng och lagrar den i en String-lista (numberList).
     static int sumOfElements (String input) {
         String[] numberList = input.split("");
+        
+        //Definierar en integer-array som ska lagra varenda tal
         ArrayList<Integer> intList = new ArrayList<>();
         int sum = 0;
         for (int i = 0; i < input.length(); i++) {
+            //Parsear strängen och lagrar tal i integer-array:n
             intList.add(parseInt(numberList[i]));
+            //Summerar array:ns index
             sum = sum + intList.get(i);
         }
         return sum;
